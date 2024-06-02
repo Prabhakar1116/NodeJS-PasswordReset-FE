@@ -32,7 +32,7 @@ const Register = () => {
     try {
       // Calling data from backend
       let res = await axios.post(
-        "http://localhost:5000/api/user/register",
+        "https://nodejs-passwordreset-be.onrender.com/api/user/register",
         values
       );
 

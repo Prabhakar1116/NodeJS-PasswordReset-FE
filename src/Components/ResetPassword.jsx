@@ -23,7 +23,7 @@ import { useEffect, useState } from "react";
     try {
       // calling data from backend
       let res = await axios.get(
-        "http://localhost:5000/api/user/list-all-users"
+        "https://nodejs-passwordreset-be.onrender.com/api/user/list-all-users"
       );
       if (res.data && res.data.users) {
         const reqUser = res.data.users.find((user) => user.email === email);
@@ -52,7 +52,7 @@ import { useEffect, useState } from "react";
   const onSubmit = async (values) => {
     try {
       let res = await axios.put(
-        "http://localhost:5000/api/user/resetPassword",
+        "https://nodejs-passwordreset-be.onrender.com/api/user/resetPassword",
         { ...values, email }
       );
       if (res.status === 200) {

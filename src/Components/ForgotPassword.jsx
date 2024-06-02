@@ -26,7 +26,7 @@ const ForgotPassword = () => {
     try {
       // calling from the backend
       let res = await axios.post(
-        "http://localhost:5000/api/user/forgotPassword",
+        "https://nodejs-passwordreset-be.onrender.com/api/user/forgotPassword",
         values
       );
       if (res.status === 201) {

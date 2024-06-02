@@ -25,7 +25,7 @@ const Login = ({ setUsername }) => {
     try {
       // calling data from backend
       const res = await axios.post(
-        "http://localhost:5000/api/user/login",
+        "https://nodejs-passwordreset-be.onrender.com/api/user/login",
         values
       );
       if (res.status === 200) {
